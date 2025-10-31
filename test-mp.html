@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест "Сортировка МП"</title>
+    <link rel="shortcut icon" href="./images/title-logo.png" type="image/gif">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="animations/animation.css">
+    <link href="https://fonts.googleapis.com/css2?family=BBH+Sans+Bogle&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/test-mp.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="center">
+            <header class="header-top">
+                <div class="header-logo">
+                    <a href="index.html" class="header-logo-link">
+                        WB Brest
+                    </a>       
+                </div>  
+            </header>
+
+            <h1 class="head-title">Тест по операции "Сортировка МП"</h1>
+
+            <div class="test-container">
+                <div class="progress" id="progress">Вопрос 1 из 10</div>
+                
+                <div id="questionsContainer">
+                    <!-- Вопросы будут добавлены через JavaScript -->
+                </div>
+
+                <div class="test-controls">
+                    <button class="test-btn" id="prevBtn" onclick="prevQuestion()" disabled>Назад</button>
+                    <button class="test-btn" id="nextBtn" onclick="nextQuestion()">Далее</button>
+                    <button class="test-btn" id="submitBtn" onclick="submitTest()" style="display: none;">Завершить тест</button>
+                </div>
+
+                <div class="results" id="results">
+                    <div class="score" id="score"></div>
+                    <div class="result-text" id="resultText"></div>
+                    
+                    <div class="answers-analysis" id="answersAnalysis">
+                        <!-- Анализ ответов будет добавлен через JavaScript -->
+                    </div>
+                    
+                    <div class="learning-recommendations" id="learningRecommendations">
+                        <!-- Рекомендации по обучению будут добавлены через JavaScript -->
+                    </div>
+                    
+                    <div class="test-controls">
+                        <button class="test-btn" onclick="resetTest()">Пройти тест снова</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/test-mp.js"></script>
+</body>
+</html>

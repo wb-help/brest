@@ -1,0 +1,879 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            background: linear-gradient(90deg, rgba(125, 25, 145, 1) 10%, rgb(175, 8, 155) 30%, rgb(188, 29, 220) 70%, rgba(125, 25, 145, 1) 90%);
+            background-size: 400% 400%;
+            animation: backgroundSwap 12s ease infinite;
+            min-height: 100vh;
+        }
+
+        .center{
+            max-width: 1280px;
+            width: 95%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        body {
+            font-family: 'BBH Sans Bogle', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .section-body {
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 4px solid rgba(160, 152, 152, 0.3);
+        }
+
+        /* Header стили */
+        .header-top {
+            border-bottom: 3px solid rgba(70, 70, 70, 0.5);
+            margin-bottom: 20px;
+            padding: 15px 0;
+        }
+
+        .header-logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .header-logo-link {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 8px 0;
+            display: block;
+        }
+
+        .header-logo-link:hover {
+            color: #cd5be3;
+            transform: scale(1.05);
+        }
+
+        /* Заголовки */
+        .title-name {
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        /* Основной текст */
+        .sort-desc {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        /* Секция оборудования */
+        .oborud-sort-list {
+            list-style: none;
+            counter-reset: oborud-counter;
+            margin: 20px 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .oborud-sort-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 0;
+            border-left: 3px solid #cd5be3;
+            counter-increment: oborud-counter;
+            position: relative;
+            flex: 1;
+            min-width: 180px;
+            max-width: 220px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .oborud-sort-item::before {
+            content: counter(oborud-counter);
+            background: #cd5be3;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -17px;
+            top: -17px;
+            z-index: 2;
+        }
+
+        .oborud-sort-desc {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+            margin-top: 8px;
+        }
+
+        .oborud-sort-img {
+            text-align: center;
+            margin: 5px 0;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .oborud-sort-img img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .oborud-sort-img img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Размеры для изображений оборудования */
+        .oborud-sort-img1 img {
+            max-width: 120px;
+        }
+
+        .oborud-sort-img2 img {
+            max-width: 100px;
+        }
+
+        .oborud-sort-img3 img {
+            max-width: 80px;
+        }
+
+        /* ОСНОВНЫЕ КАРТИНКИ - ВСЕ ПО ЦЕНТРУ */
+        .sort-img {
+            text-align: center;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .sort-img img {
+            max-width: 40%;
+            height: auto;
+            border-radius: 6px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .sort-img img:hover {
+            transform: scale(1.02);
+        }
+
+        /* УВЕЛИЧЕННЫЕ КАРТИНКИ */
+        .kvadrat-raspolozhenie img {
+            max-width: 600px;
+        }
+
+        /* СКРИНШОТЫ С ТЕЛЕФОНА - УВЕЛИЧЕНЫ И ВЫРАВНЕНЫ ПО ЦЕНТРУ */
+        .phone-screenshot {
+            text-align: center;
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .phone-screenshot img {
+            max-width: 400px; /* увеличены с 200px */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* Блоки для скриншотов в ряд */
+        .screenshots-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .screenshots-row .phone-screenshot {
+            flex: 0 0 auto;
+        }
+
+        /* УМЕНЬШЕННЫЕ КАРТИНКИ */
+        .raspolozhenie-pred img,
+        .qr-peredacha img,
+        .printer-stiker img,
+        .oshibka-volna img,
+        .tvyordiy-znak img,
+        .oshibka-peredacha img,
+        .perekleika-peredachi img {
+            max-width: 150px;
+        }
+
+        .raspolozhenie-pred img {
+            max-width: 300px;
+        }
+
+        /* КОНТЕЙНЕРЫ ДЛЯ НЕСКОЛЬКИХ КАРТИНОК - ВЫРАВНЕНЫ ПО ЦЕНТРУ */
+        .block-images1,
+        .block-images2,
+        .block-images3 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 15px 0;
+        }
+
+        .block-images1 .sort-img,
+        .block-images2 .sort-img,
+        .block-images3 .sort-img {
+            flex: 1;
+            min-width: 140px;
+            max-width: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Особые стили для блоков с двумя картинками */
+        .block-images2 .sort-img img,
+        .block-images3 .sort-img img {
+            max-width: 160px;
+        }
+
+        .one-img {
+            max-width: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Списки */
+        .bullet-list {
+            list-style: none;
+            margin: 15px 0;
+        }
+
+        .bullet-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 6px;
+            padding: 10px 15px 10px 35px;
+            margin-bottom: 10px;
+            border-left: 3px solid #cd5be3;
+            position: relative;
+        }
+
+        .bullet-item::before {
+            content: "•";
+            color: #cd5be3;
+            font-size: 1.5rem;
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .task-list,
+        .step-list,
+        .errors-list {
+            list-style: none;
+            counter-reset: list-counter;
+            margin: 15px 0;
+        }
+
+        .task-item,
+        .step-item,
+        .errors-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 3px solid #cd5be3;
+            counter-increment: list-counter;
+            position: relative;
+        }
+
+        .task-item::before,
+        .step-item::before,
+        .errors-item::before {
+            content: counter(list-counter);
+            background: #cd5be3;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .task-desc,
+        .step-desc,
+        .errors-desc {
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Специфичные стили для ошибок */
+        .attention-info {
+            color: #ff6b6b;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .important-note {
+            background: rgba(205, 91, 227, 0.2);
+            padding: 10px 15px;
+            border-radius: 6px;
+            border-left: 3px solid #cd5be3;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+
+        .note {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            font-style: italic;
+            border-left: 3px solid #cd5be3;
+        }
+
+        /* СТИЛИ ДЛЯ РАЗДЕЛА С ОШИБКАМИ - ВЫРАВНЕНЫ ПО ЦЕНТРУ */
+        .errors-img {
+            margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .errors-img4,
+        .errors-img2,
+        .errors-img1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .zadvoika,
+        .pustoi,
+        .poteria {
+            flex: 1;
+            min-width: 140px;
+            max-width: 200px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .zadvoika img,
+        .pustoi img,
+        .poteria img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .one-img.errors-img3 {
+            max-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Обертки контента */
+        .podg-desc-wrap,
+        .start-desc-wrap,
+        .process-desc-wrap,
+        .errors-desc-wrap {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+
+        /* Схема нумерации */
+        .scheme-container {
+            display: flex;
+            justify-content: center;
+            margin: 15px 0;
+        }
+
+        .scheme {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 3px solid #cd5be3;
+            text-align: center;
+            max-width: 400px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Ссылки */
+        .link {
+            color: #cd5be3;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #ff6b6b;
+            text-decoration: underline;
+        }
+
+        /* Анимации */
+        @keyframes backgroundSwap {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .animate__fadeInRight {
+            animation-duration: 0.8s;
+        }
+
+        .wow {
+            visibility: visible;
+        }
+
+        /* Специфичные стили для контента сортировки */
+        .special-cases .task-desc strong {
+            color: #cd5be3;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .close-sort .step-desc {
+            margin-bottom: 10px;
+        }
+
+        .process-sort .important-note {
+            background: rgba(255, 107, 107, 0.2);
+            border-left: 3px solid #ff6b6b;
+        }
+
+        .start-sort .attention-info {
+            background: rgba(255, 107, 107, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+            border-left: 3px solid #ff6b6b;
+        }
+
+        /* Адаптивность для планшетов */
+        @media (max-width: 1024px) {
+            .oborud-sort-list {
+                gap: 15px;
+            }
+            
+            .oborud-sort-item {
+                min-width: 160px;
+                max-width: 200px;
+                padding: 12px;
+            }
+            
+            .kvadrat-raspolozhenie img {
+                max-width: 500px;
+            }
+            
+            .phone-screenshot img {
+                max-width: 220px;
+            }
+            
+            .raspolozhenie-pred img,
+            .qr-peredacha img,
+            .printer-stiker img,
+            .oshibka-volna img,
+            .tvyordiy-znak img,
+            .oshibka-peredacha img,
+            .perekleika-peredachi img {
+                max-width: 330px;
+            }
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .center {
+                width: 95%;
+                padding: 15px 0;
+            }
+            
+            .title-name {
+                font-size: 1.6rem;
+                margin-bottom: 25px;
+            }
+            
+            .section-title {
+                font-size: 1.3rem;
+            }
+            
+            .sort-desc {
+                font-size: 0.9rem;
+            }
+            
+            /* Секция оборудования */
+            .oborud-sort-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+            
+            .oborud-sort-item {
+                min-width: 200px;
+                max-width: 280px;
+                width: 100%;
+                padding: 12px 10px 12px 20px;
+                flex-direction: row;
+                text-align: left;
+            }
+            
+            .oborud-sort-item::before {
+                position: static;
+                margin-right: 10px;
+                flex-shrink: 0;
+                width: 30px;
+                height: 30px;
+                font-size: 1rem;
+            }
+            
+            .oborud-sort-desc {
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+            
+            .oborud-sort-img {
+                margin-left: auto;
+                flex-grow: 0;
+            }
+            
+            .oborud-sort-img1 img {
+                max-width: 80px;
+            }
+            
+            .oborud-sort-img2 img {
+                max-width: 70px;
+            }
+            
+            .oborud-sort-img3 img {
+                max-width: 60px;
+            }
+            
+            .kvadrat-raspolozhenie img {
+                max-width: 400px;
+            }
+            
+            .phone-screenshot img {
+                max-width: 200px;
+            }
+            
+            .raspolozhenie-pred img,
+            .qr-peredacha img,
+            .printer-stiker img,
+            .oshibka-volna img,
+            .tvyordiy-znak img,
+            .oshibka-peredacha img,
+            .perekleika-peredachi img {
+                max-width: 210px;
+            }
+            
+            .screenshots-row {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .title-name {
+                font-size: 1.4rem;
+                margin-bottom: 20px;
+            }
+            
+            .section-title {
+                font-size: 1.2rem;
+            }
+            
+            .sort-desc {
+                font-size: 0.85rem;
+                text-align: left;
+            }
+            
+            .header-logo-link {
+                font-size: 18px;
+            }
+            
+            .section-body {
+                margin-bottom: 20px;
+                padding-bottom: 20px;
+            }
+            
+            /* Секция оборудования */
+            .oborud-sort-item {
+                flex-direction: column;
+                text-align: center;
+                padding: 12px;
+            }
+            
+            .oborud-sort-item::before {
+                margin-right: 0;
+                margin-bottom: 5px;
+                position: relative;
+            }
+            
+            .oborud-sort-desc {
+                margin-bottom: 8px;
+            }
+            
+            .oborud-sort-img {
+                margin-left: 0;
+            }
+            
+            .oborud-sort-img1 img {
+                max-width: 70px;
+            }
+            
+            .oborud-sort-img2 img {
+                max-width: 60px;
+            }
+            
+            .oborud-sort-img3 img {
+                max-width: 50px;
+            }
+            
+            .kvadrat-raspolozhenie img {
+                max-width: 320px;
+            }
+            
+            .phone-screenshot img {
+                max-width: 180px;
+            }
+            
+            .raspolozhenie-pred img,
+            .qr-peredacha img,
+            .printer-stiker img,
+            .oshibka-volna img,
+            .tvyordiy-znak img,
+            .oshibka-peredacha img,
+            .perekleika-peredachi img {
+                max-width: 150px;
+            }
+            
+            .screenshots-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+
+        /* Для очень больших экранов */
+        @media (min-width: 1440px) {
+            .oborud-sort-list {
+                gap: 25px;
+            }
+            
+            .oborud-sort-item {
+                min-width: 200px;
+                max-width: 240px;
+            }
+            
+            .oborud-sort-img1 img {
+                max-width: 140px;
+            }
+            
+            .oborud-sort-img2 img {
+                max-width: 120px;
+            }
+            
+            .oborud-sort-img3 img {
+                max-width: 100px;
+            }
+            
+            .kvadrat-raspolozhenie img {
+                max-width: 650px;
+            }
+            
+            .phone-screenshot img {
+                max-width: 270px;
+            }
+            
+            .raspolozhenie-pred img,
+            .qr-peredacha img,
+            .printer-stiker img,
+            .oshibka-volna img,
+            .tvyordiy-znak img,
+            .oshibka-peredacha img,
+            .perekleika-peredachi img {
+                max-width: 560px;
+            }
+        }
+
+        /* Гарантируем, что изображения не выходят за пределы */
+        img {
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+        }
+
+
+        .oborud-sort-list {
+    list-style: none;
+    counter-reset: oborud-counter;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.oborud-sort-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 0;
+    border-left: 4px solid #cd5be3;
+    counter-increment: oborud-counter;
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.oborud-sort-item::before {
+    content: counter(oborud-counter);
+    background: #cd5be3;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -25px;
+    top: -25px;
+    z-index: 2;
+}
+
+.oborud-sort-desc {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.oborud-sort-img {
+    text-align: center;
+    margin: 10px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oborud-sort-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.oborud-sort-img img:hover {
+    transform: scale(1.03);
+}
+
+/* Специфичные размеры для изображений оборудования */
+.oborud-sort-img1 img {
+    max-width: 200px;
+}
+
+.oborud-sort-img2 img {
+    max-width: 180px;
+}
+
+.oborud-sort-img3 img {
+    max-width: 150px;
+}
+
+.sort-desc {
+    /* Стили для заголовка, если нужны */
+    font-size: 1.4rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}

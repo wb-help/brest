@@ -1,0 +1,67 @@
+@media screen and (max-width: 737px) {
+
+    .wrap-tests, .wrap-vspom {
+        padding-bottom: 20px;
+    }
+
+    .operation-skl .operation-skl-wrap {
+        margin-bottom: 20px;
+    }
+
+    .title-name {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .operation-skl .operation-skl-wrap .operation-link {
+	
+	flex: 1 1 30%;
+    padding: 20px 10px;
+    margin-bottom: 15px
+
+    }
+
+    .wrap-tests .tests-link {
+        margin-bottom: 15px;
+    }
+
+    .wrap-vspom a:not(:last-child) {
+        margin-right: 15px;
+    }
+
+    .wrap-group a:not(:nth-child(2)):not(:nth-child(4)) {
+        margin-right: 15px;
+    }
+
+    .wrap-tests a:not(:nth-child(2)):not(:nth-child(4)) {
+        margin-right: 15px;
+    }
+
+    .operation-skl .operation-skl-wrap .operation-link:not(:nth-child(2)):not(:nth-child(4)) {
+        margin-right: 15px;
+    }
+
+    .wrap-vspom .operation-link {
+	
+	flex: 1 1 30%;
+    padding: 20px 10px;
+    }
+
+    .wrap-tests .tests-link {
+	
+	    flex: 1 1 30%;
+        padding: 20px 10px;
+    }
+
+    .wrap-group .group-links-link {
+	
+	    flex: 1 1 30%;
+    	padding: 20px 10px;
+    }
+
+    a {
+        font-size: 14px;
+    }
+
+} 
+

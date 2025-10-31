@@ -1,0 +1,1106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(90deg,rgba(125, 25, 145, 1) 10%, rgb(175, 8, 155) 30%, rgb(188, 29, 220) 70%, rgba(125, 25, 145, 1) 90%);
+    background-size: 400% 400%;
+    animation: backgroundSwap 12s ease infinite;
+    min-height: 100vh;
+}
+
+.center{
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body {
+    font-family: 'BBH Sans Bogle', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.section-body {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 8px solid rgba(160, 152, 152, 0.3);
+}
+
+.section-body:not(:last-child) {
+    border-bottom: 8px solid rgba(160, 152, 152, 0.3);
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+/* Header стили */
+.header-top {
+    border-bottom: 5px solid rgba(70, 70, 70, 0.5);
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+    display: block;
+}
+
+.header-logo-link:hover {
+    color: #cd5be3;
+    transform: scale(1.05);
+}
+
+/* Заголовки */
+.title-name {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.index-name {
+    margin-bottom: 70px;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* СТИЛИ ДЛЯ ГЛАВНОЙ СТРАНИЦЫ */
+
+/* Секция операций */
+.operation-skl-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.operation-skl-wrap a {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.operation-skl-wrap a:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+}
+
+.operation-link {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+}
+
+.operation-link:hover {
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border-color: #cd5be3;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 100%);
+}
+
+.operation {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Вспомогательные операции */
+.vspom-operation .wrap-vspom {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.vspom-operation .operation-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.vspom-operation .operation-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3;
+}
+
+/* Тестирование */
+.tests-operation .wrap-tests {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tests-operation .tests-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.tests-operation .tests-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3;
+}
+
+/* Полезные ссылки (группы) */
+.group-links .wrap-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.group-links .group-links-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.group-links .group-links-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3;
+}
+
+.flex-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.group-desc {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.tg-logo {
+    max-width: 40px;
+    flex-shrink: 0;
+}
+
+.tg-img {
+    max-width: 100%;
+    height: auto;
+    animation: goElements 1s ease-in-out infinite;
+}
+
+/* СТИЛИ ДЛЯ СТРАНИЦЫ ИНСТРУКЦИЙ */
+
+/* Основной текст */
+.pred-desc {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+.clear-sec {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    margin-bottom: 50px;
+}
+
+.clear-sec-name {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 900;
+}
+
+.clear-desc {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Контейнеры для фото и описания */
+.photo-and-desc-contain {
+    margin: 40px 0;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    border-left: 4px solid #cd5be3;
+}
+
+/* Адаптивные изображения */
+.photo-contain {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.photo-contain img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.photo-contain img:hover {
+    transform: scale(1.02);
+}
+
+/* Специфичные размеры для разных типов изображений */
+.camera-screen img {
+    max-width: 300px;
+}
+
+.id-qr img {
+    max-width: 250px;
+}
+
+.MX-screen img {
+    max-width: 350px;
+}
+
+.MX-qr img {
+    max-width: 280px;
+}
+
+/* Контейнер для шагов */
+.steps-contain {
+    margin: 40px 0;
+    padding: 25px;
+    background: rgba(205, 91, 227, 0.2);
+    border-radius: 10px;
+    border: 1px solid rgba(205, 91, 227, 0.3);
+}
+
+.steps-img-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.steps-img1 {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.steps-img1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 2px solid #cd5be3;
+}
+
+/* Контейнер для двух изображений */
+.two-img-contain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.two-img-contain .photo-contain {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+/* СТИЛИ ДЛЯ СТРАНИЦЫ ПРЕДСОРТИРОВКИ */
+
+/* Секция оборудования */
+.oborud-pred-list {
+    list-style: none;
+    counter-reset: oborud-counter;
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.oborud-pred-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 0;
+    border-left: 4px solid #cd5be3;
+    counter-increment: oborud-counter;
+    position: relative;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.oborud-pred-item::before {
+    content: counter(oborud-counter);
+    background: #cd5be3;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -25px;
+    top: -25px;
+    z-index: 2;
+}
+
+.oborud-pred-desc {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #fff;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+.oborud-pred-img {
+    text-align: center;
+    margin: 10px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.oborud-pred-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.oborud-pred-img img:hover {
+    transform: scale(1.03);
+}
+
+/* Специфичные размеры для изображений оборудования */
+.oborud-pred-img1 img {
+    max-width: 200px;
+}
+
+.oborud-pred-img2 img {
+    max-width: 180px;
+}
+
+.oborud-pred-img3 img {
+    max-width: 150px;
+}
+
+/* Блоки с изображениями */
+.pred-img {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.pred-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.pred-img img:hover {
+    transform: scale(1.03);
+}
+
+/* Конкретные размеры для изображений предсортировки */
+.pred-img1 img { /* img1.jpg */
+    max-width: 500px;
+}
+
+.pred-img2 img,
+.pred-img3 img,
+.pred-img4 img {
+    max-width: 280px;
+}
+
+.pred-img6 img,
+.pred-img7 img,
+.pred-img10 img,
+.pred-img11 img,
+.pred-img13 img,
+.pred-img14 img {
+    max-width: 350px;
+}
+
+.pred-img8 img,
+.pred-img9 img {
+    max-width: 300px;
+}
+
+.errors-img3 img { /* brak.jpg */
+    max-width: 350px;
+}
+
+/* Контейнеры для нескольких изображений */
+.block-images1,
+.block-images2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.block-images1 .pred-img,
+.block-images2 .pred-img {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.one-img {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Списки */
+.task-list,
+.step-list,
+.errors-list {
+    list-style: none;
+    counter-reset: list-counter;
+    margin: 25px 0;
+}
+
+.task-item,
+.step-item,
+.errors-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-left: 4px solid #cd5be3;
+    counter-increment: list-counter;
+    position: relative;
+}
+
+.task-item::before,
+.step-item::before,
+.errors-item::before {
+    content: counter(list-counter);
+    background: #cd5be3;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.task-desc,
+.step-desc,
+.errors-desc {
+    margin-left: 30px;
+    font-size: 1.1rem;
+}
+
+/* Специфичные стили для ошибок */
+.attention-info {
+    color: #ff6b6b;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.errors-img {
+    margin: 20px 0;
+}
+
+.errors-img4,
+.errors-img2,
+.errors-img1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.zadvoika,
+.pustoi,
+.poteria {
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.zadvoika img,
+.pustoi img,
+.poteria img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.one-img.errors-img3 {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+/* Обертки контента */
+.podg-desc-wrap,
+.start-desc-wrap,
+.errors-desc-wrap {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.podg-wrap1 {
+    margin-bottom: 30px;
+}
+
+/* Анимации */
+@keyframes backgroundSwap {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes goElements {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.animate__fadeInRight {
+    animation-duration: 0.8s;
+}
+
+.wow {
+    visibility: visible;
+}
+
+/* Выделение важной информации */
+.attention-info {
+    background: rgba(255, 107, 107, 0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border-left: 4px solid #ff6b6b;
+    margin: 15px 0;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 1024px) {
+    .oborud-pred-list {
+        gap: 25px;
+    }
+    
+    .oborud-pred-item {
+        min-width: 220px;
+        max-width: 280px;
+        padding: 20px;
+    }
+    
+    .oborud-pred-desc {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .center {
+        width: 95%;
+        padding: 10px 0;
+    }
+    
+    .title-name {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        font-size: 1.7rem;
+    }
+    
+    .pred-desc {
+        font-size: 1.1rem;
+    }
+    
+    .clear-desc {
+        font-size: 1rem;
+    }
+    
+    /* Главная страница */
+    .operation-skl-wrap,
+    .vspom-operation .wrap-vspom,
+    .tests-operation .wrap-tests,
+    .group-links .wrap-group {
+        gap: 20px;
+    }
+    
+    .operation-skl-wrap a,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        flex: 1 1 100%;
+        min-width: 250px;
+    }
+    
+    .operation-link,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        padding: 30px 15px;
+    }
+    
+    .operation {
+        font-size: 1.1rem;
+    }
+    
+    .group-desc {
+        font-size: 1.1rem;
+    }
+    
+    /* Страница инструкций */
+    .photo-and-desc-contain {
+        margin: 30px 0;
+        padding: 15px;
+    }
+    
+    .steps-contain {
+        padding: 20px;
+    }
+    
+    .steps-img-contain {
+        gap: 10px;
+    }
+    
+    .steps-img1 {
+        min-width: 150px;
+        max-width: 200px;
+    }
+    
+    .two-img-contain {
+        gap: 15px;
+    }
+    
+    .two-img-contain .photo-contain {
+        min-width: 200px;
+    }
+    
+    .camera-screen img {
+        max-width: 250px;
+    }
+    
+    .id-qr img {
+        max-width: 200px;
+    }
+    
+    .MX-screen img {
+        max-width: 280px;
+    }
+    
+    .MX-qr img {
+        max-width: 220px;
+    }
+    
+    /* Страница предсортировки */
+    .oborud-pred-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    
+    .oborud-pred-item {
+        min-width: 250px;
+        max-width: 400px;
+        width: 100%;
+        padding: 20px 15px 20px 30px;
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .oborud-pred-item::before {
+        position: static;
+        margin-right: 15px;
+        flex-shrink: 0;
+    }
+    
+    .oborud-pred-desc {
+        margin-top: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+    }
+    
+    .oborud-pred-img {
+        margin-left: auto;
+        flex-grow: 0;
+    }
+    
+    .oborud-pred-img1 img {
+        max-width: 120px;
+    }
+    
+    .oborud-pred-img2 img {
+        max-width: 100px;
+    }
+    
+    .oborud-pred-img3 img {
+        max-width: 80px;
+    }
+    
+    .pred-img1 img {
+        max-width: 400px;
+    }
+    
+    .pred-img6 img,
+    .pred-img7 img,
+    .pred-img10 img,
+    .pred-img11 img,
+    .pred-img13 img,
+    .pred-img14 img,
+    .errors-img3 img {
+        max-width: 300px;
+    }
+    
+    .pred-img2 img,
+    .pred-img3 img,
+    .pred-img4 img,
+    .pred-img8 img,
+    .pred-img9 img,
+    .errors-img1 img,
+    .errors-img2 img,
+    .errors-img4 img {
+        max-width: 250px;
+    }
+    
+    .one-img {
+        max-width: 350px;
+    }
+    
+    .podg-desc-wrap,
+    .start-desc-wrap,
+    .errors-desc-wrap {
+        padding: 20px;
+    }
+    
+    .header-logo-link {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+    
+    .title-name {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .pred-desc {
+        font-size: 1rem;
+        text-align: left;
+    }
+    
+    .header-logo-link {
+        font-size: 22px;
+    }
+    
+    .section-body {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+    
+    /* Главная страница */
+    .operation-link,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        padding: 25px 10px;
+    }
+    
+    .operation {
+        font-size: 1rem;
+    }
+    
+    .group-desc {
+        font-size: 1rem;
+    }
+    
+    .flex-contain {
+        gap: 10px;
+    }
+    
+    .tg-logo {
+        max-width: 35px;
+    }
+    
+    /* Страница инструкций */
+    .camera-screen img {
+        max-width: 200px;
+    }
+    
+    .id-qr img {
+        max-width: 180px;
+    }
+    
+    .MX-screen img {
+        max-width: 250px;
+    }
+    
+    .MX-qr img {
+        max-width: 200px;
+    }
+    
+    .steps-img-contain {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .steps-img1 {
+        max-width: 100%;
+    }
+    
+    .two-img-contain {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .two-img-contain .photo-contain {
+        max-width: 100%;
+    }
+    
+    /* Страница предсортировки */
+    .oborud-pred-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .oborud-pred-item::before {
+        margin-right: 0;
+        margin-bottom: 10px;
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    
+    .oborud-pred-desc {
+        margin-bottom: 15px;
+    }
+    
+    .oborud-pred-img {
+        margin-left: 0;
+    }
+    
+    .oborud-pred-img1 img {
+        max-width: 150px;
+    }
+    
+    .oborud-pred-img2 img {
+        max-width: 130px;
+    }
+    
+    .oborud-pred-img3 img {
+        max-width: 100px;
+    }
+    
+    .pred-img1 img {
+        max-width: 300px;
+    }
+    
+    .pred-img6 img,
+    .pred-img7 img,
+    .pred-img10 img,
+    .pred-img11 img,
+    .pred-img13 img,
+    .pred-img14 img,
+    .errors-img3 img {
+        max-width: 250px;
+    }
+    
+    .pred-img2 img,
+    .pred-img3 img,
+    .pred-img4 img,
+    .pred-img8 img,
+    .pred-img9 img,
+    .errors-img1 img,
+    .errors-img2 img,
+    .errors-img4 img {
+        max-width: 200px;
+    }
+    
+    .one-img {
+        max-width: 280px;
+    }
+    
+    .block-images1,
+    .block-images2 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .block-images1 .pred-img,
+    .block-images2 .pred-img {
+        max-width: 100%;
+    }
+    
+    .errors-img4,
+    .errors-img2,
+    .errors-img1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .zadvoika,
+    .pustoi,
+    .poteria {
+        max-width: 100%;
+    }
+}
+
+/* Для очень больших экранов */
+@media (min-width: 1440px) {
+    .oborud-pred-list {
+        gap: 40px;
+    }
+    
+    .oborud-pred-item {
+        min-width: 280px;
+        max-width: 320px;
+    }
+    
+    .oborud-pred-img1 img {
+        max-width: 220px;
+    }
+    
+    .oborud-pred-img2 img {
+        max-width: 200px;
+    }
+    
+    .oborud-pred-img3 img {
+        max-width: 170px;
+    }
+}
+
+/* Гарантируем, что изображения не выходят за пределы */
+img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+
+.task-item .task-img2 {
+    text-align: center;
+}

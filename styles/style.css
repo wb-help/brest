@@ -1,0 +1,433 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Базовые стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(90deg,rgba(125, 25, 145, 1) 10%, rgb(175, 8, 155) 30%, rgb(188, 29, 220) 70%, rgba(125, 25, 145, 1) 90%);
+    background-size: 400% 400%;
+    animation: backgroundSwap 12s ease infinite;
+    min-height: 100vh;
+}
+
+.center{
+    max-width: 1280px;
+    width: 95%;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+body {
+    font-family: 'BBH Sans Bogle', sans-serif;
+    font-weight: 400;
+    color: #fff;
+    font-size: 25px;
+    line-height: 1.6;
+}
+
+.section-body:not(:last-child) {
+    border-bottom: 8px solid rgba(160, 152, 152, 0.3);
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+}
+
+/* Header стили */
+.header-top {
+    border-bottom: 5px solid rgba(70, 70, 70, 0.5);
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.header-logo-link {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 10px 0;
+    display: block;
+}
+
+.header-logo-link:hover {
+    color: #cd5be3;
+    transform: scale(1.05);
+}
+
+/* Заголовки */
+.title-name {
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.index-name {
+    margin-bottom: 70px;
+}
+
+/* Секция операций */
+.operation-skl-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 50px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.operation-skl-wrap a {
+    display: block;
+    width: 100%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.operation-skl-wrap a:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+}
+
+.operation-link {
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    border: 2px solid transparent;
+}
+
+.operation-link:hover {
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border-color: #cd5be3;
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 100%);
+}
+
+.operation {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Вспомогательные операции */
+.vspom-operation .wrap-vspom {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    justify-content: center;
+    gap: 30px;
+}
+
+.vspom-operation .operation-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.vspom-operation .operation-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3;
+}
+
+/* Тестирование */
+.tests-operation .wrap-tests {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.tests-operation .tests-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    border: 2px solid transparent; 
+}
+
+.tests-operation .tests-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3; /
+}
+
+/* Полезные ссылки (группы) */
+.group-links .wrap-group {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 20px;
+    gap: 30px;
+    justify-content: center;
+}
+
+.group-links .group-links-link {
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+    color: #333;
+    padding: 30px 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.group-links .group-links-link:hover {
+    color: #cd5be3;
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    border: 2px solid #cd5be3;
+}
+
+.flex-contain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.group-desc {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.tg-logo {
+    max-width: 40px;
+    flex-shrink: 0;
+}
+
+.tg-img {
+    max-width: 100%;
+    height: auto;
+    animation: goElements 1s ease-in-out infinite;
+}
+
+/* Анимации */
+@keyframes backgroundSwap {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes goElements {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-3px);
+    }
+}
+
+.animate__fadeInRight {
+    animation-duration: 0.8s;
+}
+
+.wow {
+    visibility: visible;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .center {
+        width: 95%;
+        padding: 10px 0;
+    }
+    
+    .title-name {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .operation-skl-wrap,
+    .vspom-operation .wrap-vspom,
+    .tests-operation .wrap-tests,
+    .group-links .wrap-group {
+        gap: 20px;
+    }
+    
+    .operation-skl-wrap a,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        flex: 1 1 100%;
+        min-width: 250px;
+    }
+    
+    .operation-link,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        padding: 30px 15px;
+    }
+    
+    .operation {
+        font-size: 1.1rem;
+    }
+    
+    .group-desc {
+        font-size: 1.1rem;
+    }
+    
+    .header-logo-link {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 20px;
+    }
+    
+    .title-name {
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    
+    .header-logo-link {
+        font-size: 22px;
+    }
+    
+    .operation-link,
+    .vspom-operation .operation-link,
+    .tests-operation .tests-link,
+    .group-links .group-links-link {
+        padding: 25px 10px;
+    }
+    
+    .operation {
+        font-size: 1rem;
+    }
+    
+    .group-desc {
+        font-size: 1rem;
+    }
+    
+    .flex-contain {
+        gap: 10px;
+    }
+    
+    .tg-logo {
+        max-width: 35px;
+    }
+    
+    .section-body:not(:last-child) {
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+    }
+}

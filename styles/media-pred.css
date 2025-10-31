@@ -1,0 +1,160 @@
+@media screen and (max-width: 1200px) {
+
+    .title-name {
+        font-size: 28px; 
+    }
+
+    .pred-desc {
+        margin-bottom: 20px;
+        font-size: 17px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+
+    .errors-img {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+    .errors-img .zadvoika1 {
+        width: 300px;
+    }
+
+    .errors-img .zadvoika2 {
+        width: 120px;
+    }
+
+    .errors-img .pustoi1 {
+        width: 120px;
+    }
+
+    .errors-img .pustoi2 {
+        width: 300px;
+    }
+
+    .errors-img .zadvoika img {
+        width: 100%;
+    }
+
+    .errors-img .pustoi img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+
+
+
+
+}
+
+
+@media screen and (max-width: 770px) {
+
+    .oborud-pred-list .oborud-pred-item img {
+        width: 60%;
+    }
+
+    .pred-desc {
+        font-size: 15px;
+    }
+
+    .section-title {
+        margin-bottom: 20px;
+    }
+
+    .block-images1 .pred-img:not(:last-child) {
+        margin-right: 0px;
+    }
+
+    .block-images1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pred-img2 img, .pred-img3 img, .pred-img4 img {
+        width: 60%;
+    }
+
+    .one-img img {
+        width: 60%;
+    }
+
+    .poteria {
+        display: flex;
+        justify-content: center;
+    }
+
+    .errors-img3 img {
+        width: 45%;
+    }
+
+
+
+}
+
+@media screen and (max-width: 500px) {
+    .title-name {
+        font-size: 20px;
+    }
+
+    .section-title {
+        font-size: 16px;
+    }
+
+    .pred-desc {
+        font-size: 14px;
+    }
+
+    .oborud-pred-list, .podg-desc-wrap, .start-desc-wrap, .errors-desc-wrap {
+        margin-bottom: -10px;
+    }   
+
+    .pred-img1 img {
+        width: 55%;
+    }
+
+    .pred-img2 img, .pred-img3 img, .pred-img4 img {
+        width: 85%;
+    }
+
+    .one-img img {
+        width: 85%;
+    }
+
+    .block-images2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .block-images2 .pred-img {
+        width: 85%;
+    }
+
+    .pred-img13 img{
+        width: 45%;
+    }
+
+    .errors-img3 img{
+        width: 45%;
+    }
+
+    .errors-img4 .poteria {
+        width: 45%;
+    }
+
+ 
+    
+}
+
+
+
+
+
+

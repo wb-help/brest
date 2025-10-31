@@ -1,0 +1,340 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrapper{
+            max-width: 1440px;
+            width: 100%;
+            margin: 0 auto;
+            background: linear-gradient(90deg,rgba(125, 25, 145, 1) 10%, rgb(175, 8, 155) 30%, rgb(188, 29, 220) 70%, rgba(125, 25, 145, 1) 90%);
+            background-size: 400% 400%;
+            animation: backgroundSwap 12s ease infinite;
+            min-height: 100vh;
+        }
+
+        .center{
+            max-width: 1280px;
+            width: 95%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        body {
+            font-family: 'BBH Sans Bogle', sans-serif;
+            font-weight: 400;
+            color: #fff;
+            font-size: 25px;
+            line-height: 1.6;
+        }
+
+        /* Header стили */
+        .header-top {
+            border-bottom: 5px solid rgba(70, 70, 70, 0.5);
+            margin-bottom: 30px;
+            padding: 20px 0;
+            width: 100%;
+        }
+
+        .header-logo {
+            display: block;
+            width: 100%;
+        }
+
+        .header-logo-link {
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 10px 0;
+        }
+
+        .header-logo-link:hover {
+            color: #cd5be3;
+            transform: scale(1.05);
+        }
+
+        /* Заголовки */
+        .head-title {
+            text-align: center;
+            font-weight: 900;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #fff;
+        }
+
+        /* Стили для теста */
+        .test-container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 50px;
+        }
+
+        .question {
+            margin-bottom: 40px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #cd5be3;
+        }
+
+        .question-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .option {
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .option:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .option.selected {
+            border-color: #b0b0b0;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .test-controls {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .test-btn {
+            background: linear-gradient(135deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.9) 100%);
+            color: #333;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .test-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        .test-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            display: none;
+            margin-top: 30px;
+        }
+
+        .score {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .result-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .progress {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+
+        /* Стили для анализа ответов */
+        .answers-analysis {
+            margin-top: 30px;
+        }
+
+        .analysis-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .analysis-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #F44336;
+        }
+
+        .analysis-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+
+        .analysis-answer {
+            margin-bottom: 5px;
+            color: #fff;
+        }
+
+        .user-answer {
+            color: #F44336;
+            font-weight: 600;
+        }
+
+        .correct-answer {
+            color: #4CAF50;
+            font-weight: 600;
+        }
+
+        .learning-recommendations {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid #ffa726;
+        }
+
+        .recommendations-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .recommendations-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .recommendation-item {
+            padding: 10px 0;
+            color: #fff;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .recommendation-item::before {
+            content: "•";
+            color: #ffa726;
+            font-weight: bold;
+            position: absolute;
+            left: 10px;
+        }
+
+        /* Анимации */
+        @keyframes backgroundSwap {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            .center {
+                width: 95%;
+                padding: 10px 0;
+            }
+            
+            .head-title {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            
+            .header-logo-link {
+                font-size: 28px;
+            }
+            
+            .test-container {
+                padding: 20px;
+            }
+            
+            .question {
+                padding: 20px;
+            }
+            
+            .question-text {
+                font-size: 1.1rem;
+            }
+            
+            .option {
+                font-size: 1rem;
+                padding: 12px 15px;
+            }
+            
+            .test-btn {
+                padding: 12px 25px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 20px;
+            }
+            
+            .head-title {
+                font-size: 1.7rem;
+                margin-bottom: 30px;
+            }
+            
+            .header-logo-link {
+                font-size: 24px;
+            }
+            
+            .test-controls {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .test-btn {
+                width: 100%;
+                max-width: 250px;
+            }
+            
+            .score {
+                font-size: 1.7rem;
+            }
+            
+            .result-text {
+                font-size: 1.1rem;
+            }
+        }
